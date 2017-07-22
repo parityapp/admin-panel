@@ -42,6 +42,8 @@ function Home(props, context) {
         </div>
       </div>
 
+{/* 
+
       <div className="row">
         <div className="col-lg-3 col-md-6">
           <StatWidget
@@ -74,9 +76,18 @@ function Home(props, context) {
           />
         </div>
       </div>
+*/}  
 
       <div className="row">
-        <div className="col-lg-12">
+        <div className="col-lg-* col-md-*">
+          <Panel
+            header={<span>
+              <i className="fa fa-bar-chart-o fa-fw" /> Channel Summary </span>}
+          >
+        <div className="col-lg-* col-md-*">
+	    <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</h2>
+        </div> 
+	</Panel>
 
           <Panel
             header={<span>
@@ -97,17 +108,46 @@ function Home(props, context) {
               </ResponsiveContainer>
             </div>
           </Panel>
-	  <Panel
+          <Panel
+            header={<span>
+              <i className="fa fa-bar-chart-o fa-fw" /> Hot Topics </span>}
+          >
+        <div className="col-lg-* col-md-*">
+          <ul>
+            <li><h3>Topic 1</h3></li>
+            <li><h3>Topic 2</h3></li>
+            <li><h3>Topic 3</h3></li>
+          </ul>  
+        </div> 
+	</Panel>
+
+<Panel
             header={<span>
               <i className="fa fa-bar-chart-o fa-fw" /> Five Top Messages
             </span>}
           >
-          <div className="row col-lg-8">
+          <div className="row col-lg-12">
             <Panel>
               <Chats/>
             </Panel>
           </div>
          </Panel>
+         <Panel
+            header={<span>
+              <i className="fa fa-bar-chart-o fa-fw" /> Most Active User </span>}
+          >
+         <h2 text-align='center'><b>Donald Trump</b></h2>
+	<div className="col-lg-6 col-md-6">
+          <StatWidget
+            style="panel-primary"
+            icon="fa fa-comments fa-5x"
+            count="1,126"
+            headerText="New Comments!"
+            footerText="View Details"
+            linkTo="/"
+          />
+        </div> 
+	</Panel>
         </div>
       </div>
     </div>
