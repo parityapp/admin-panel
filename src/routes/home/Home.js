@@ -136,7 +136,7 @@ function Home(props, context) {
             header={<span>
               <i className="fa fa-bar-chart-o fa-fw" /> Most Active User </span>}
           >
-         <h2 text-align='center'><b>Donald Trump</b></h2>
+         <h2><b>Donald Trump</b></h2>
 	<div className="col-lg-6 col-md-6">
           <StatWidget
             style="panel-primary"
