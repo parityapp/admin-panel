@@ -1399,12 +1399,12 @@ module.exports =
             _react2.default.createElement(
               'span',
               null,
-              '\xA0SB Admin React - '
+              '\xA0Parity - '
             ),
             _react2.default.createElement(
               'a',
-              { href: 'http://startreact.com/', title: 'Start React', rel: 'home' },
-              'StartReact.com'
+              { href: 'https://webfest.web.cern.ch/content/parity', title: 'Start Parity', rel: 'home' },
+              'Parity.com'
             ),
             _react2.default.createElement(
               'button',
@@ -2158,7 +2158,7 @@ module.exports =
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
-  var title = 'Sb Admin React';
+  var title = 'Parity - Home';
   
   var data = [{ name: 'Page A', uv: 4000, pv: 2400, amt: 2400, value: 600 }, { name: 'Page B', uv: 3000, pv: 1398, amt: 2210, value: 300 }, { name: 'Page C', uv: 2000, pv: 9800, amt: 2290, value: 500 }, { name: 'Page D', uv: 2780, pv: 3908, amt: 2000, value: 400 }, { name: 'Page E', uv: 1890, pv: 4800, amt: 2181, value: 200 }, { name: 'Page F', uv: 2390, pv: 3800, amt: 2500, value: 700 }, { name: 'Page G', uv: 3490, pv: 4300, amt: 2100, value: 100 }];
   
@@ -2189,7 +2189,7 @@ module.exports =
           _react2.default.createElement(_Widget2.default, {
             style: 'panel-primary',
             icon: 'fa fa-comments fa-5x',
-            count: '26',
+            count: '126',
             headerText: 'New Comments!',
             footerText: 'View Details',
             linkTo: '/'
@@ -2201,8 +2201,8 @@ module.exports =
           _react2.default.createElement(_Widget2.default, {
             style: 'panel-green',
             icon: 'fa fa-tasks fa-5x',
-            count: '12',
-            headerText: 'New Tasks!',
+            count: '122',
+            headerText: 'New Channels!',
             footerText: 'View Details',
             linkTo: '/'
           })
@@ -2213,7 +2213,7 @@ module.exports =
           _react2.default.createElement(_Widget2.default, {
             style: 'panel-red',
             icon: 'fa fa-support fa-5x',
-            count: '13',
+            count: '130',
             headerText: 'Support Tickets!',
             footerText: 'View Details',
             linkTo: '/'
@@ -2233,36 +2233,7 @@ module.exports =
                 'span',
                 null,
                 _react2.default.createElement('i', { className: 'fa fa-bar-chart-o fa-fw' }),
-                ' Area Chart Example',
-                _react2.default.createElement(
-                  'div',
-                  { className: 'pull-right' },
-                  _react2.default.createElement(
-                    _reactBootstrap.DropdownButton,
-                    { title: 'Dropdown', bsSize: 'xs', pullRight: true, id: 'dropdownButton1' },
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: '1' },
-                      'Action'
-                    ),
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: '2' },
-                      'Another action'
-                    ),
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: '3' },
-                      'Something else here'
-                    ),
-                    _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: '4' },
-                      'Separated link'
-                    )
-                  )
-                )
+                ' Real-time Data Visualization'
               )
             },
             _react2.default.createElement(
@@ -2270,7 +2241,7 @@ module.exports =
               null,
               _react2.default.createElement(
                 _recharts.ResponsiveContainer,
-                { width: '80%', aspect: 2 },
+                { width: '100%', aspect: 4 },
                 _react2.default.createElement(
                   _recharts.AreaChart,
                   { data: data, margin: { top: 10, right: 30, left: 0, bottom: 0 } },
@@ -2286,9 +2257,20 @@ module.exports =
             )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'row col-lg-8' },
-            _react2.default.createElement(_chats2.default, null)
+            _reactBootstrap.Panel,
+            {
+              header: _react2.default.createElement(
+                'span',
+                null,
+                _react2.default.createElement('i', { className: 'fa fa-bar-chart-o fa-fw' }),
+                ' Five Top Messages'
+              )
+            },
+            _react2.default.createElement(
+              'div',
+              { className: 'row col-lg-8' },
+              _react2.default.createElement(_chats2.default, null)
+            )
           )
         )
       )
@@ -20234,7 +20216,7 @@ module.exports =
         _react2.default.createElement(
           'h1',
           { className: 'login-brand-text' },
-          'SB Admin React'
+          'Parity'
         ),
         _react2.default.createElement(
           'h3',
