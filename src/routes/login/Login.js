@@ -20,8 +20,24 @@ const title = 'Log In';
 
 
 function submitHandler(e) {
-  e.preventDefault();
-  history.push('/');
+  console.log("send the data to backedn");
+    e.preventDefault();
+    console.log(document.getElementById('username').value)
+
+    // fetch("/", {
+    //   method: 'POST',
+    // headers: new Headers({
+    //          'Content-Type': 'application/x-www-form-urlencoded',
+    // body: "param1=value1&param2=value2"
+    // })
+    // .then((response) => response.text())
+    // .then((responseText) => {
+    //     alert(responseText);
+    // })
+    // .catch((error) => {
+    //     console.error(error);
+    // });
+    history.push('/');
 }
 
 function Login(props, context) {
@@ -43,6 +59,7 @@ function Login(props, context) {
                 className="form-control"
                 placeholder="Username"
                 name="name"
+                id="username"
               />
             </div>
 
@@ -52,6 +69,7 @@ function Login(props, context) {
                 placeholder="Password"
                 type="password"
                 name="password"
+                id="password"
               />
             </div>
             <Checkbox label="Remember Me" > Remember Me </Checkbox>
@@ -65,7 +83,6 @@ function Login(props, context) {
 
   );
 }
-
 
 Login.contextTypes = { setTitle: PropTypes.func.isRequired };
 
