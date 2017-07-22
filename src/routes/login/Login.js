@@ -22,10 +22,17 @@ const title = 'Log In';
 function submitHandler(e) {
   console.log("send the data to backedn");
     e.preventDefault();
-    console.log(document.getElementById('username').value)
-
+    var userInfo = {
+        "username" : document.getElementById('username').value,
+        "password" : document.getElementById('password').value
+    };
+    var data = new FormData();
+    data.append( "userInfo", JSON.stringify( userInfo ) );
+    for (var pair of data.entries()) {
+    console.log(pair[0]+ ', ' + pair[1]);
+    }
     // fetch("/", {
-    //   method: 'POST',
+    // method: 'POST',
     // headers: new Headers({
     //          'Content-Type': 'application/x-www-form-urlencoded',
     // body: "param1=value1&param2=value2"
