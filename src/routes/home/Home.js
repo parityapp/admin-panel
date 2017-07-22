@@ -19,7 +19,7 @@ import {
   CartesianGrid, AreaChart, Bar, BarChart,
   ResponsiveContainer } from '../../vendor/recharts';
 
-const title = 'Sb Admin React';
+const title = 'Parity - Home';
 
 
 const data = [
@@ -47,7 +47,7 @@ function Home(props, context) {
           <StatWidget
             style="panel-primary"
             icon="fa fa-comments fa-5x"
-            count="26"
+            count="126"
             headerText="New Comments!"
             footerText="View Details"
             linkTo="/"
@@ -57,8 +57,8 @@ function Home(props, context) {
           <StatWidget
             style="panel-green"
             icon="fa fa-tasks fa-5x"
-            count="12"
-            headerText="New Tasks!"
+            count="122"
+            headerText="New Channels!"
             footerText="View Details"
             linkTo="/"
           />
@@ -67,7 +67,7 @@ function Home(props, context) {
           <StatWidget
             style="panel-red"
             icon="fa fa-support fa-5x"
-            count="13"
+            count="130"
             headerText="Support Tickets!"
             footerText="View Details"
             linkTo="/"
@@ -80,20 +80,11 @@ function Home(props, context) {
 
           <Panel
             header={<span>
-              <i className="fa fa-bar-chart-o fa-fw" /> Area Chart Example
-              <div className="pull-right">
-                <DropdownButton title="Dropdown" bsSize="xs" pullRight id="dropdownButton1" >
-                  <MenuItem eventKey="1">Action</MenuItem>
-                  <MenuItem eventKey="2">Another action</MenuItem>
-                  <MenuItem eventKey="3">Something else here</MenuItem>
-                  <MenuItem divider />
-                  <MenuItem eventKey="4">Separated link</MenuItem>
-                </DropdownButton>
-              </div>
+              <i className="fa fa-bar-chart-o fa-fw" /> Real-time Data Visualization
             </span>}
           >
             <div>
-              <ResponsiveContainer width="80%" aspect={2}>
+              <ResponsiveContainer width="100%" aspect={4}>
                 <AreaChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }} >
                   <XAxis dataKey="name" />
                   <YAxis />
