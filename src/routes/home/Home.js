@@ -42,6 +42,8 @@ function Home(props, context) {
         </div>
       </div>
 
+{/* 
+
       <div className="row">
         <div className="col-lg-3 col-md-6">
           <StatWidget
@@ -74,6 +76,7 @@ function Home(props, context) {
           />
         </div>
       </div>
+*/}  
 
       <div className="row">
         <div className="col-lg-12">
@@ -99,6 +102,27 @@ function Home(props, context) {
           </Panel>
 	  <Panel
             header={<span>
+              <i className="fa fa-bar-chart-o fa-fw" /> Channel Summary </span>}
+          >
+        <div className="col-lg-3 col-md-6">
+	<h2>This is the summary of the channel.</h2>
+        </div> 
+	</Panel>
+        <Panel
+            header={<span>
+              <i className="fa fa-bar-chart-o fa-fw" /> Hot Topics </span>}
+          >
+        <div className="col-lg-3 col-md-6">
+          <ul>
+            <li><h3>Topic 1</h3></li>
+            <li><h3>Topic 2</h3></li>
+            <li><h3>Topic 3</h3></li>
+          </ul>  
+        </div> 
+	</Panel>
+
+<Panel
+            header={<span>
               <i className="fa fa-bar-chart-o fa-fw" /> Five Top Messages
             </span>}
           >
@@ -106,6 +130,21 @@ function Home(props, context) {
             <Chats/>
           </div>
          </Panel>
+         <Panel
+            header={<span>
+              <i className="fa fa-bar-chart-o fa-fw" /> Most Active User </span>}
+          >
+        <div className="col-lg-3 col-md-6">
+          <StatWidget
+            style="panel-primary"
+            icon="fa fa-comments fa-5x"
+            count="1,126"
+            headerText="New Comments!"
+            footerText="Donald Trump"
+            linkTo="/"
+          />
+        </div> 
+	</Panel>
         </div>
       </div>
     </div>
