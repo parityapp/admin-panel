@@ -80,6 +80,14 @@ function Home(props, context) {
 
       <div className="row">
         <div className="col-lg-* col-md-*">
+          <Panel
+            header={<span>
+              <i className="fa fa-bar-chart-o fa-fw" /> Channel Summary </span>}
+          >
+        <div className="col-lg-* col-md-*">
+	    <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</h2>
+        </div> 
+	</Panel>
 
           <Panel
             header={<span>
@@ -100,15 +108,7 @@ function Home(props, context) {
               </ResponsiveContainer>
             </div>
           </Panel>
-	  <Panel
-            header={<span>
-              <i className="fa fa-bar-chart-o fa-fw" /> Channel Summary </span>}
-          >
-        <div className="col-lg-* col-md-*">
-	    <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</h2>
-        </div> 
-	</Panel>
-        <Panel
+          <Panel
             header={<span>
               <i className="fa fa-bar-chart-o fa-fw" /> Hot Topics </span>}
           >
@@ -136,13 +136,14 @@ function Home(props, context) {
             header={<span>
               <i className="fa fa-bar-chart-o fa-fw" /> Most Active User </span>}
           >
-        <div className="col-lg-6 col-md-6">
+         <h2 text-align='center'><b>Donald Trump</b></h2>
+	<div className="col-lg-6 col-md-6">
           <StatWidget
             style="panel-primary"
             icon="fa fa-comments fa-5x"
             count="1,126"
             headerText="New Comments!"
-            footerText="Donald Trump"
+            footerText="View Details"
             linkTo="/"
           />
         </div> 
