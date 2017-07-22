@@ -107,7 +107,9 @@ function Home(props, context) {
             </div>
           </Panel>
           <div className="row col-lg-8">
-            <Chats/>
+            <Panel>
+              <Chats/>
+            </Panel>
           </div>
         </div>
       </div>
