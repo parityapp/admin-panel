@@ -6,11 +6,11 @@ export default class Chats extends React.Component {
     super(props);
     this.state = {
       messages : [
-      (new Message({ id: 1, message: "1st top message" })), // Gray bubble 
-      (new Message({ id: 0, message: "2nd top message" })), // Blue bubble 
-      (new Message({ id: 1, message: "3rd top message" })), // Gray bubble 
-      (new Message({ id: 0, message: "4th top message" })), // Blue bubble 
-      (new Message({ id: 1, message: "5th top message" }))  // Gray bubble 
+      (new Message({ id: 1, message: "1st top message. Lorem ipsum dolor sit amet." })), // Gray bubble 
+      (new Message({ id: 0, message: "2nd top message. Consetetur sadipscing elitr." })), // Blue bubble 
+      (new Message({ id: 1, message: "3rd top message. Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat." })), // Gray bubble 
+      (new Message({ id: 0, message: "4th top message. Sed diam voluptua." })), // Blue bubble 
+      (new Message({ id: 1, message: "5th top message. Stet clita kasd gubergren." }))  // Gray bubble 
     ],
     };
   }

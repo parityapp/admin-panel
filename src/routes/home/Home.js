@@ -79,7 +79,7 @@ function Home(props, context) {
 */}  
 
       <div className="row">
-        <div className="col-lg-12">
+        <div className="col-lg-* col-md-*">
 
           <Panel
             header={<span>
@@ -104,15 +104,15 @@ function Home(props, context) {
             header={<span>
               <i className="fa fa-bar-chart-o fa-fw" /> Channel Summary </span>}
           >
-        <div className="col-lg-3 col-md-6">
-	<h2>This is the summary of the channel.</h2>
+        <div className="col-lg-* col-md-*">
+	    <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</h2>
         </div> 
 	</Panel>
         <Panel
             header={<span>
               <i className="fa fa-bar-chart-o fa-fw" /> Hot Topics </span>}
           >
-        <div className="col-lg-3 col-md-6">
+        <div className="col-lg-* col-md-*">
           <ul>
             <li><h3>Topic 1</h3></li>
             <li><h3>Topic 2</h3></li>
@@ -126,7 +126,7 @@ function Home(props, context) {
               <i className="fa fa-bar-chart-o fa-fw" /> Five Top Messages
             </span>}
           >
-          <div className="row col-lg-8">
+          <div className="row col-lg-12">
             <Panel>
               <Chats/>
             </Panel>
@@ -136,7 +136,7 @@ function Home(props, context) {
             header={<span>
               <i className="fa fa-bar-chart-o fa-fw" /> Most Active User </span>}
           >
-        <div className="col-lg-3 col-md-6">
+        <div className="col-lg-6 col-md-6">
           <StatWidget
             style="panel-primary"
             icon="fa fa-comments fa-5x"
