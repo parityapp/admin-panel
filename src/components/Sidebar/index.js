@@ -16,23 +16,23 @@ class Sidebar extends Component {
     };
   }
 
-  componentDidMount() {
-      console.log("fetch");
-      var that = this;
-      var url = 'http://localhost:3000/api/data'
-
-      fetch(url)
-      .then(function(response) {
-        if (response.status >= 400) {
-          throw new Error("Bad response from server");
-        }
-        return response.json();
-      })
-      .then(function(data) {
-        // that.setState({ channels: data.person });
-        console.log(data)
-      });
-  }
+  // componentDidMount() {
+  //     console.log("fetch");
+  //     var that = this;
+  //     var url = 'http://localhost:3000/api/data'
+  //
+  //     fetch(url)
+  //     .then(function(response) {
+  //       if (response.status >= 400) {
+  //         throw new Error("Bad response from server");
+  //       }
+  //       return response.json();
+  //     })
+  //     .then(function(data) {
+  //       // that.setState({ channels: data.person });
+  //       console.log(data)
+  //     });
+  // }
 
   render() {
 
