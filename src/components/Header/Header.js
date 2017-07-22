@@ -21,7 +21,7 @@ import history from '../../core/history';
 import $ from "jquery";
 import Sidebar from '../Sidebar';
 
-const logo = require('./logo.png');
+const logo = require('./parity-logo.png');
 
 function Header() {
   return (

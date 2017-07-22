@@ -53,7 +53,7 @@ function Login(props, context) {
     <div className="col-md-4 col-md-offset-4">
       <div className="text-center">
         <h1 className="login-brand-text">Parity</h1>
-        <h3 className="text-muted">Created by <a href="http://startreact.com">StartReact.com</a> team</h3>
+        <img id="login-logo" src="/parity-logo.png"/>
       </div>
 
       <Panel header={<h3>Please Sign In</h3>} className="login-panel">
