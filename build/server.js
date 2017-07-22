@@ -1982,11 +1982,7 @@ module.exports =
       var _this = (0, _possibleConstructorReturn3.default)(this, (Sidebar.__proto__ || (0, _getPrototypeOf2.default)(Sidebar)).call(this, props));
   
       _this.state = {
-        uiElementsCollapsed: true,
-        chartsElementsCollapsed: true,
-        multiLevelDropdownCollapsed: true,
-        thirdLevelDropdownCollapsed: true,
-        samplePagesCollapsed: true
+        channels: ["channel 1", "channel 2", "channel 3"]
       };
       return _this;
     }
@@ -1994,7 +1990,6 @@ module.exports =
     (0, _createClass3.default)(Sidebar, [{
       key: 'render',
       value: function render() {
-        var _this2 = this;
   
         return _react2.default.createElement(
           'div',
@@ -2023,372 +2018,21 @@ module.exports =
                   )
                 )
               ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'a',
-                  { href: '', onClick: function onClick(e) {
-                      e.preventDefault();_history2.default.push('/');
-                    } },
-                  _react2.default.createElement('i', { className: 'fa fa-dashboard fa-fw' }),
-                  ' \xA0Dashboard'
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                { className: (0, _classnames2.default)({ active: !this.state.chartsElementsCollapsed }) },
-                _react2.default.createElement(
-                  'a',
-                  {
-                    href: '',
-                    onClick: function onClick(e) {
-                      e.preventDefault();
-                      _this2.setState({ chartsElementsCollapsed: !_this2.state.chartsElementsCollapsed });
-                      return false;
-                    }
-                  },
-                  _react2.default.createElement('i', { className: 'fa fa-bar-chart-o fa-fw' }),
-                  ' \xA0Charts',
-                  _react2.default.createElement('span', { className: 'fa arrow' })
-                ),
-                _react2.default.createElement(
-                  'ul',
-                  {
-                    className: (0, _classnames2.default)({
-                      'nav nav-second-level': true,
-                      collapse: this.state.chartsElementsCollapsed
-                    })
-                  },
+              this.state.channels.map(function (channel, index) {
+                return _react2.default.createElement(
+                  'li',
+                  { key: channel },
                   _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/flotcharts');
-                        } },
-                      'FlotCharts'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      {
-                        href: '',
-                        onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/morrisjscharts');
-                        }
-                      },
-                      'Morrisjs Charts'
-                    )
+                    'a',
+                    { href: '', onClick: function onClick(e) {
+                        e.preventDefault();_history2.default.push('/');
+                      } },
+                    _react2.default.createElement('i', { className: 'fa fa-dashboard fa-fw' }),
+                    ' ',
+                    channel
                   )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'a',
-                  { href: '', onClick: function onClick(e) {
-                      e.preventDefault();_history2.default.push('/table');
-                    } },
-                  _react2.default.createElement('i', { className: 'fa fa-table fa-fw' }),
-                  ' \xA0Tables'
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'a',
-                  { href: '', onClick: function onClick(e) {
-                      e.preventDefault();_history2.default.push('/forms');
-                    } },
-                  _react2.default.createElement('i', { className: 'fa fa-table fa-fw' }),
-                  ' \xA0Forms'
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                { className: (0, _classnames2.default)({ active: !this.state.uiElementsCollapsed }) },
-                _react2.default.createElement(
-                  'a',
-                  {
-                    href: '',
-                    onClick: function onClick(e) {
-                      e.preventDefault();
-                      _this2.setState({ uiElementsCollapsed: !_this2.state.uiElementsCollapsed
-                      });return false;
-                    }
-                  },
-                  _react2.default.createElement('i', { className: 'fa fa-edit fa-fw' }),
-                  ' UI Elements',
-                  _react2.default.createElement('span', { className: 'fa arrow' })
-                ),
-                _react2.default.createElement(
-                  'ul',
-                  {
-                    className: (0, _classnames2.default)({
-                      'nav nav-second-level': true,
-                      collapse: this.state.uiElementsCollapsed
-                    })
-                  },
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/panelwells');
-                        } },
-                      'Panels And Wells'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/button');
-                        } },
-                      'Buttons'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      {
-                        href: '',
-                        onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/notification');
-                        }
-                      },
-                      'Notification'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/typography');
-                        } },
-                      'Typography'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/icons');
-                        } },
-                      'Icons'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/grid');
-                        } },
-                      'Grid'
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                { className: (0, _classnames2.default)({ active: !this.state.multiLevelDropdownCollapsed }) },
-                _react2.default.createElement(
-                  'a',
-                  {
-                    href: '',
-                    onClick: function onClick(e) {
-                      e.preventDefault();
-                      _this2.setState({
-                        multiLevelDropdownCollapsed: !_this2.state.multiLevelDropdownCollapsed
-                      });
-                      return false;
-                    }
-                  },
-                  _react2.default.createElement('i', { className: 'fa fa-sitemap fa-fw' }),
-                  '\xA0Multi-Level Dropdown',
-                  _react2.default.createElement('span', { className: 'fa arrow' })
-                ),
-                _react2.default.createElement(
-                  'ul',
-                  {
-                    className: (0, _classnames2.default)({
-                      'nav nav-second-level': true, collapse: this.state.multiLevelDropdownCollapsed
-                    })
-                  },
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();
-                        } },
-                      'Second Level Item'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();
-                        } },
-                      'Second Level Item'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    { className: (0, _classnames2.default)({ active: !this.state.thirdLevelDropdownCollapsed }) },
-                    _react2.default.createElement(
-                      'a',
-                      {
-                        href: '',
-                        onClick: function onClick(e) {
-                          e.preventDefault();
-                          _this2.setState({
-                            thirdLevelDropdownCollapsed: !_this2.state.thirdLevelDropdownCollapsed
-                          });
-                          return false;
-                        }
-                      },
-                      'Third Level',
-                      _react2.default.createElement('span', { className: 'fa arrow' })
-                    ),
-                    _react2.default.createElement(
-                      'ul',
-                      {
-                        className: (0, _classnames2.default)({
-                          'nav nav-second-level': true,
-                          collapse: this.state.thirdLevelDropdownCollapsed
-                        })
-                      },
-                      _react2.default.createElement(
-                        'li',
-                        null,
-                        _react2.default.createElement(
-                          'a',
-                          { href: '', onClick: function onClick(e) {
-                              e.preventDefault();
-                            } },
-                          'Third Level Item'
-                        )
-                      ),
-                      _react2.default.createElement(
-                        'li',
-                        null,
-                        _react2.default.createElement(
-                          'a',
-                          { href: '', onClick: function onClick(e) {
-                              e.preventDefault();
-                            } },
-                          'Third Level Item'
-                        )
-                      ),
-                      _react2.default.createElement(
-                        'li',
-                        null,
-                        _react2.default.createElement(
-                          'a',
-                          { href: '', onClick: function onClick(e) {
-                              e.preventDefault();
-                            } },
-                          'Third Level Item'
-                        )
-                      ),
-                      _react2.default.createElement(
-                        'li',
-                        null,
-                        _react2.default.createElement(
-                          'a',
-                          { href: '', onClick: function onClick(e) {
-                              e.preventDefault();
-                            } },
-                          'Third Level Item'
-                        )
-                      )
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                { className: (0, _classnames2.default)({ active: !this.state.samplePagesCollapsed }) },
-                _react2.default.createElement(
-                  'a',
-                  {
-                    href: '',
-                    onClick: function onClick(e) {
-                      e.preventDefault();
-                      _this2.setState({
-                        samplePagesCollapsed: !_this2.state.samplePagesCollapsed
-                      });
-                      return false;
-                    }
-                  },
-                  _react2.default.createElement('i', { className: 'fa fa-files-o fa-fw' }),
-                  '\xA0Sample Pages',
-                  _react2.default.createElement('span', { className: 'fa arrow' })
-                ),
-                _react2.default.createElement(
-                  'ul',
-                  {
-                    className: (0, _classnames2.default)({
-                      'nav nav-second-level': true,
-                      collapse: this.state.samplePagesCollapsed
-                    })
-                  },
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/blank');
-                        } },
-                      'Blank'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/login');
-                        } },
-                      'Login'
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'a',
-                  { href: 'http://www.strapui.com/' },
-                  'Premium React Themes'
-                )
-              )
+                );
+              })
             )
           )
         );
@@ -2494,6 +2138,10 @@ module.exports =
   
   var _reactBootstrap = __webpack_require__(38);
   
+  var _chats = __webpack_require__(50);
+  
+  var _chats2 = _interopRequireDefault(_chats);
+  
   var _Home = __webpack_require__(52);
   
   var _Home2 = _interopRequireDefault(_Home);
@@ -2563,18 +2211,6 @@ module.exports =
           'div',
           { className: 'col-lg-3 col-md-6' },
           _react2.default.createElement(_Widget2.default, {
-            style: 'panel-yellow',
-            icon: 'fa fa-shopping-cart fa-5x',
-            count: '124',
-            headerText: 'New Orders!',
-            footerText: 'View Details',
-            linkTo: '/'
-          })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'col-lg-3 col-md-6' },
-          _react2.default.createElement(_Widget2.default, {
             style: 'panel-red',
             icon: 'fa fa-support fa-5x',
             count: '13',
@@ -2589,7 +2225,7 @@ module.exports =
         { className: 'row' },
         _react2.default.createElement(
           'div',
-          { className: 'col-lg-8' },
+          { className: 'col-lg-12' },
           _react2.default.createElement(
             _reactBootstrap.Panel,
             {
@@ -2634,7 +2270,7 @@ module.exports =
               null,
               _react2.default.createElement(
                 _recharts.ResponsiveContainer,
-                { width: '100%', aspect: 2 },
+                { width: '80%', aspect: 2 },
                 _react2.default.createElement(
                   _recharts.AreaChart,
                   { data: data, margin: { top: 10, right: 30, left: 0, bottom: 0 } },
@@ -2650,383 +2286,9 @@ module.exports =
             )
           ),
           _react2.default.createElement(
-            _reactBootstrap.Panel,
-            {
-              header: _react2.default.createElement(
-                'span',
-                null,
-                _react2.default.createElement('i', { className: 'fa fa-bar-chart-o fa-fw' }),
-                ' Bar Chart Example',
-                _react2.default.createElement(
-                  'div',
-                  { className: 'pull-right' },
-                  _react2.default.createElement(
-                    _reactBootstrap.DropdownButton,
-                    { title: 'Dropdown', bsSize: 'xs', pullRight: true, id: 'dropdownButton2' },
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: '1' },
-                      'Action'
-                    ),
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: '2' },
-                      'Another action'
-                    ),
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: '3' },
-                      'Something else here'
-                    ),
-                    _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: '4' },
-                      'Separated link'
-                    )
-                  )
-                )
-              )
-            },
-            _react2.default.createElement(
-              'div',
-              null,
-              _react2.default.createElement(
-                _recharts.ResponsiveContainer,
-                { width: '100%', aspect: 2 },
-                _react2.default.createElement(
-                  _recharts.BarChart,
-                  { data: data, margin: { top: 10, right: 30, left: 0, bottom: 0 } },
-                  _react2.default.createElement(_recharts.CartesianGrid, { stroke: '#ccc' }),
-                  _react2.default.createElement(_recharts.XAxis, { dataKey: 'name' }),
-                  _react2.default.createElement(_recharts.YAxis, null),
-                  _react2.default.createElement(_recharts.Tooltip, null),
-                  _react2.default.createElement(_recharts.Bar, { dataKey: 'pv', stackId: '1', fill: '#8884d8' }),
-                  _react2.default.createElement(_recharts.Bar, { dataKey: 'uv', stackId: '1', fill: '#82ca9d' }),
-                  _react2.default.createElement(_recharts.Bar, { type: 'monotone', dataKey: 'amt', fill: '#ffc658' })
-                )
-              )
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Panel,
-            {
-              header: _react2.default.createElement(
-                'span',
-                null,
-                _react2.default.createElement('i', { className: 'fa fa-clock-o fa-fw' }),
-                ' Responsive Timeline'
-              )
-            },
-            _react2.default.createElement(
-              'div',
-              null,
-              _react2.default.createElement(
-                'ul',
-                { className: 'timeline' },
-                _react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'timeline-badge' },
-                    _react2.default.createElement('i', { className: 'fa fa-check' })
-                  ),
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'timeline-panel' },
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'timeline-heading' },
-                      _react2.default.createElement(
-                        'h4',
-                        { className: 'timeline-title' },
-                        'Lorem ipsum dolor'
-                      ),
-                      _react2.default.createElement(
-                        'p',
-                        null,
-                        _react2.default.createElement(
-                          'small',
-                          { className: 'text-muted' },
-                          _react2.default.createElement('i', { className: 'fa fa-clock-o' }),
-                          ' 11 hours ago via Twitter'
-                        )
-                      )
-                    ),
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'timeline-body' },
-                      _react2.default.createElement(
-                        'p',
-                        null,
-                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero laboriosam dolor perspiciatis omnis exercitationem. Beatae, officia pariatur? Est cum veniam excepturi. Maiores praesentium, porro voluptas suscipit facere rem dicta, debitis.'
-                      )
-                    )
-                  )
-                ),
-                _react2.default.createElement(
-                  'li',
-                  { className: 'timeline-inverted' },
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'timeline-badge warning' },
-                    _react2.default.createElement('i', { className: 'fa fa-credit-card' })
-                  ),
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'timeline-panel' },
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'timeline-heading' },
-                      _react2.default.createElement(
-                        'h4',
-                        { className: 'timeline-title' },
-                        'Lorem ipsum dolor'
-                      )
-                    ),
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'timeline-body' },
-                      _react2.default.createElement(
-                        'p',
-                        null,
-                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorem quibusdam, tenetur commodi provident cumque magni voluptatem libero, quis rerum. Fugiat esse debitis optio, tempore. Animi officiis alias, officia repellendus.'
-                      ),
-                      _react2.default.createElement(
-                        'p',
-                        null,
-                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maiores odit qui est tempora eos, nostrum provident explicabo dignissimos debitis vel! Adipisci eius voluptates, ad aut recusandae minus eaque facere.'
-                      )
-                    )
-                  )
-                ),
-                _react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'timeline-badge danger' },
-                    _react2.default.createElement('i', { className: 'fa fa-bomb' })
-                  ),
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'timeline-panel' },
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'timeline-heading' },
-                      _react2.default.createElement(
-                        'h4',
-                        { className: 'timeline-title' },
-                        'Lorem ipsum dolor'
-                      )
-                    ),
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'timeline-body' },
-                      _react2.default.createElement(
-                        'p',
-                        null,
-                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus numquam facilis enim eaque, tenetur nam id qui vel velit similique nihil iure molestias aliquam, voluptatem totam quaerat, magni commodi quisquam.'
-                      )
-                    )
-                  )
-                )
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'col-lg-4' },
-          _react2.default.createElement(
-            _reactBootstrap.Panel,
-            {
-              header: _react2.default.createElement(
-                'span',
-                null,
-                _react2.default.createElement('i', { className: 'fa fa-bell fa-fw' }),
-                ' Notifications Panel'
-              )
-            },
-            _react2.default.createElement(
-              _reactBootstrap.ListGroup,
-              null,
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-comment fa-fw' }),
-                ' New Comment',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    '4 minutes ago'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-twitter fa-fw' }),
-                ' 3 New Followers',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    '12 minutes ago'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-envelope fa-fw' }),
-                ' Message Sent',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    '27 minutes ago'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-tasks fa-fw' }),
-                ' New Task',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    '43 minutes ago'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-upload fa-fw' }),
-                ' Server Rebooted',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    '11:32 AM'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-bolt fa-fw' }),
-                ' Server Crashed!',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    '11:13 AM'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-warning fa-fw' }),
-                ' Server Not Responding',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    '10:57 AM'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-shopping-cart fa-fw' }),
-                ' New Order Placed',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    '9:49 AM'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-money fa-fw' }),
-                ' Payment Received',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    'Yesterday'
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              _reactBootstrap.Button,
-              { block: true },
-              'View All Alerts'
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Panel,
-            {
-              header: _react2.default.createElement(
-                'span',
-                null,
-                _react2.default.createElement('i', { className: 'fa fa-bar-chart-o fa-fw' }),
-                ' Donut Chart Example'
-              )
-            },
-            _react2.default.createElement(
-              'div',
-              null,
-              _react2.default.createElement(_Donut2.default, { data: data, color: '#8884d8', innerRadius: '70%', outerRadius: '90%' })
-            )
+            'div',
+            { className: 'row col-lg-8' },
+            _react2.default.createElement(_chats2.default, null)
           )
         )
       )
@@ -3045,8 +2307,100 @@ module.exports =
   exports.default = (0, _withStyles2.default)(_Home2.default)(Home);
 
 /***/ }),
-/* 50 */,
-/* 51 */,
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _getPrototypeOf = __webpack_require__(29);
+  
+  var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+  
+  var _classCallCheck2 = __webpack_require__(30);
+  
+  var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+  
+  var _createClass2 = __webpack_require__(31);
+  
+  var _createClass3 = _interopRequireDefault(_createClass2);
+  
+  var _possibleConstructorReturn2 = __webpack_require__(32);
+  
+  var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+  
+  var _inherits2 = __webpack_require__(33);
+  
+  var _inherits3 = _interopRequireDefault(_inherits2);
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _reactChatUi = __webpack_require__(51);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  var Chats = function (_React$Component) {
+    (0, _inherits3.default)(Chats, _React$Component);
+  
+    function Chats(props) {
+      (0, _classCallCheck3.default)(this, Chats);
+  
+      var _this = (0, _possibleConstructorReturn3.default)(this, (Chats.__proto__ || (0, _getPrototypeOf2.default)(Chats)).call(this, props));
+  
+      _this.state = {
+        messages: [new _reactChatUi.Message({ id: 1, message: "I'm the recipient! (The person you're talking to)" }), // Gray bubble 
+        new _reactChatUi.Message({ id: 0, message: "I'm you -- the blue bubble!" })]
+      };
+      return _this;
+    }
+  
+    (0, _createClass3.default)(Chats, [{
+      key: 'render',
+      value: function render() {
+  
+        return (
+  
+          // Your JSX... 
+  
+          _react2.default.createElement(_reactChatUi.ChatFeed, {
+            messages: this.state.messages // Boolean: list of message objects 
+            , isTyping: this.state.is_typing // Boolean: is the recipient typing 
+            , hasInputField: false // Boolean: use our input, or use your own 
+            , bubblesCentered: true //Boolean should the bubbles be centered in the feed? 
+            // JSON: Custom bubble styles 
+            , bubbleStyles: {
+              text: {
+                fontSize: 15
+              },
+              chatbubble: {
+                borderRadius: 35,
+                padding: 20
+              }
+            }
+          })
+  
+          // Your JSX... 
+  
+        );
+      }
+    }]);
+    return Chats;
+  }(_react2.default.Component);
+  
+  exports.default = Chats;
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports) {
+
+  module.exports = require("react-chat-ui");
+
+/***/ }),
 /* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
