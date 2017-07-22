@@ -5,6 +5,7 @@ import history from '../../core/history';
 class Sidebar extends Component {
 
   constructor(props) {
+    console.log("construct");
     super(props);
     this.state = {
         channels : [
@@ -13,6 +14,24 @@ class Sidebar extends Component {
             "channel 3"
         ]
     };
+  }
+
+  componentDidMount() {
+      console.log("fetch");
+      var that = this;
+      var url = 'http://localhost:3000/api/data'
+
+      fetch(url)
+      .then(function(response) {
+        if (response.status >= 400) {
+          throw new Error("Bad response from server");
+        }
+        return response.json();
+      })
+      .then(function(data) {
+        // that.setState({ channels: data.person });
+        console.log(data)
+      });
   }
 
   render() {
