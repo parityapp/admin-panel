@@ -47,7 +47,7 @@ export default [
 
   {
     path: '/',
-    
+
   // keep in mind, routes are evaluated in order
     children: [
       home,
