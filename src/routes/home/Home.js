@@ -97,9 +97,15 @@ function Home(props, context) {
               </ResponsiveContainer>
             </div>
           </Panel>
+	  <Panel
+            header={<span>
+              <i className="fa fa-bar-chart-o fa-fw" /> Five Top Messages
+            </span>}
+          >
           <div className="row col-lg-8">
             <Chats/>
           </div>
+         </Panel>
         </div>
       </div>
     </div>
